@@ -13,6 +13,7 @@ import androidx.compose.animation.core.*
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -40,6 +41,7 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -51,6 +53,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.R
 import com.example.data.MovieRecord
 import com.example.data.ZohoPreferences
 import com.example.ui.theme.*
@@ -199,15 +202,14 @@ fun DashboardScreen(
                         Box(
                             modifier = Modifier
                                 .size(34.dp)
-                                .clip(RoundedCornerShape(10.dp))
-                                .background(Brush.linearGradient(CleanBtnGradient)),
+                                .clip(RoundedCornerShape(9.dp))
+                                .border(1.dp, Color(0xFF3B82F6).copy(alpha = 0.4f), RoundedCornerShape(9.dp)),
                             contentAlignment = Alignment.Center
                         ) {
-                            Icon(
-                                imageVector = Icons.Rounded.MotionPhotosAuto,
-                                contentDescription = null,
-                                tint = Color.White,
-                                modifier = Modifier.size(18.dp)
+                            Image(
+                                painter = painterResource(R.drawable.premium_movie_link_logo_1790163614766),
+                                contentDescription = "Movie Link Logo",
+                                modifier = Modifier.fillMaxSize()
                             )
                         }
                         Spacer(modifier = Modifier.width(10.dp))
@@ -2491,20 +2493,15 @@ fun AppLockScreen(
                     modifier = Modifier
                         .size(56.dp)
                         .clip(CircleShape)
-                        .background(Brush.linearGradient(listOf(Color(0xFF1E293B), Color(0xFF0F172A))))
-                        .border(1.dp, Color(0xFF334155), CircleShape)
+                        .background(Color(0xFF0D1626))
+                        .border(1.5.dp, Color(0xFF60A5FA).copy(alpha = 0.6f), CircleShape)
                 ) {
-                    Icon(
-                        imageVector = Icons.Rounded.MovieFilter,
-                        contentDescription = null,
-                        tint = Color(0xFF3B82F6).copy(alpha = 0.4f),
-                        modifier = Modifier.size(36.dp)
-                    )
-                    Icon(
-                        imageVector = Icons.Rounded.Lock,
-                        contentDescription = "Secured",
-                        tint = Color(0xFF60A5FA),
-                        modifier = Modifier.size(24.dp)
+                    Image(
+                        painter = painterResource(R.drawable.premium_movie_link_logo_1790163614766),
+                        contentDescription = "Movie Link Logo",
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .clip(CircleShape)
                     )
                 }
             }
