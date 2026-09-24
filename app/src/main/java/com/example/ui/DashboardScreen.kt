@@ -208,16 +208,16 @@ fun DashboardScreen(
                         ) {
                             Image(
                                 painter = painterResource(R.drawable.premium_movie_link_logo_1790163614766),
-                                contentDescription = "Movie Link Logo",
+                                contentDescription = "Movie Logo",
                                 modifier = Modifier.fillMaxSize()
                             )
                         }
                         Spacer(modifier = Modifier.width(10.dp))
                         Column(horizontalAlignment = Alignment.Start) {
                             Text(
-                                text = "MOVIE LINK MANAGER",
+                                text = "MOVIE",
                                 fontWeight = FontWeight.Black,
-                                fontSize = 14.sp,
+                                fontSize = 16.sp,
                                 fontFamily = FontFamily.SansSerif,
                                 color = BubbleTextPrimary,
                                 letterSpacing = 0.5.sp
@@ -2344,7 +2344,7 @@ fun MovieCardItem(
                 Button(
                     onClick = {
                         if (movie.link.isNotEmpty()) {
-                            copyToClipboard(context, movie.link, "Movie Link")
+                            copyToClipboard(context, movie.link, "Movie")
                             isCopiedE = true
                             Toast.makeText(context, "Link (Col E) copied directly!", Toast.LENGTH_SHORT).show()
                         } else {
@@ -2498,7 +2498,7 @@ fun AppLockScreen(
                 ) {
                     Image(
                         painter = painterResource(R.drawable.premium_movie_link_logo_1790163614766),
-                        contentDescription = "Movie Link Logo",
+                        contentDescription = "Movie Logo",
                         modifier = Modifier
                             .fillMaxSize()
                             .clip(CircleShape)
@@ -2509,9 +2509,9 @@ fun AppLockScreen(
             Spacer(modifier = Modifier.height(16.dp))
             
             Text(
-                text = "MOVIE LINK",
+                text = "MOVIE",
                 fontWeight = FontWeight.Black,
-                fontSize = 20.sp,
+                fontSize = 22.sp,
                 fontFamily = FontFamily.SansSerif,
                 color = Color.White,
                 letterSpacing = 1.5.sp

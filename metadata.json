@@ -1,5 +1,5 @@
 {
-  "name": "Movie Link",
+  "name": "Movie",
   "description": "A user-friendly dashboard to import, search, manage, and filter movie links. Allows one-click copying and direct opening in the Ulaa browser.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
